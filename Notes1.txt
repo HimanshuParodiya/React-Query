@@ -1,0 +1,6 @@
+The main two things we can do with react query are:
+
+1) Query -> Getting data from somewhere
+2) Mutation -> Changing some type of data
+
+ 
