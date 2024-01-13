@@ -10,3 +10,8 @@ The main two things we can do with react query are:
 now we are fetching for post list 1
 when we are going to post list 2 it is not loading 
 here is where caching comes 
+
+// Here we are done with react query 
+
+btw it also provide prefetching 
+but for now we are done
