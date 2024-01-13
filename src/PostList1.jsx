@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import { getPost, getPosts } from "./api/post";
 
-const PostList1 = () => {
+const PostList1 = ({ id }) => {
   const postQuery = useQuery({
     queryKey: ["post"],
     queryFn: getPosts,

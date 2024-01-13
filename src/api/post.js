@@ -1,10 +1,27 @@
 import axios from "axios";
 
-export function getPosts() {
-    return axios
-        .get('https://jsonplaceholder.typicode.com/posts').then((res) => res.data)
+// get all posts
+export async function getPosts() {
+    const res = await axios
+        .get('https://jsonplaceholder.typicode.com/posts');
+    return res.data;
 }
 
-export function getPost(id) {
-    return axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`).then(res => res.data)
+// get post according to id
+export async function getPost(id) {
+    const res = await axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
+    return res.data;
+}
+
+// create post
+
+export async function createPost({ title, body }) {
+    const res = await axios
+        .post("https://jsonplaceholder.typicode.com/posts", {
+            title,
+            body,
+            userId: 1,
+            id: Date.now()
+        });
+    return res.data;
 }
